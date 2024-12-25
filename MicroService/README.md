@@ -31,7 +31,7 @@
 Будем вытаскивать файл `ad.html` который копируется в результате выполнения команды:
 
 ```Dockerfile
-COPY ./static ./static
+COPY ./templates ./templates
 ```
 
 Первый способ: `docker cp`
