@@ -4,4 +4,4 @@
 
 - Решение первой домашки в [VirtualMachine](https://github.com/Anaritus/Virtualization/blob/main/VirtualMachine/README.md).
 - Решение второй домашки в [MicroService](https://github.com/Anaritus/Virtualization/blob/main/MicroService/README.md).
-- Решение третьей домашки по ветке `task3`.
+- Решение третьей домашки по ветке [task3](https://github.com/Anaritus/Virtualization/tree/task3?tab=readme-ov-file)
