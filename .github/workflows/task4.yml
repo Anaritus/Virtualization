@@ -17,6 +17,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ vars.DOCKER_USERNAME }}/jupyterhub
+          tags: |
+            type=sha
       - name: Auth to Docker Hub
         uses: docker/login-action@v3
         with:
