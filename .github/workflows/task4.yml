@@ -16,7 +16,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ vars.DOCKER_USERNAME }}/jupyterhub:config
+          images: ${{ vars.DOCKER_USERNAME }}/jupyterhub
       - name: Auth to Docker Hub
         uses: docker/login-action@v3
         with:
@@ -26,6 +26,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           load: true
+          tags: ${{ steps.meta.outputs.tags }}
       - name: Test image
         run: |
           echo "Tests passed lol" 
@@ -33,4 +34,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
+          tags: ${{ steps.meta.outputs.tags }}
           annotations: ${{ steps.meta.outputs.annotations }}
