@@ -1,0 +1,12 @@
+services:
+  jupyterhub:
+    image: som38/jupyterhub:config
+    volumes:
+        - data:/user/local/share/jupyterhub
+    environment:
+        DIRECTORY: ${DIRECTORY}
+    ports:
+        - 8000:8000
+
+volumes:
+    data:
