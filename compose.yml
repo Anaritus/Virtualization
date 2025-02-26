@@ -1,0 +1,15 @@
+services:
+
+  nginx:
+    image: nginx
+    ports: 
+      - 8080:80
+
+  redis:
+    image: redis
+    volumes: ./data/db:/data
+
+  app:
+    build: .
+    ports: 
+      - 8081:81
